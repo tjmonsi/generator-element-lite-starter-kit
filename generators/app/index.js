@@ -4,10 +4,14 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
-  prompting() {
+  prompting () {
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the gnarly ${chalk.red('generator-element-lite-starter-kit')} generator!`)
+      yosay(
+        `Welcome to the gnarly ${chalk.red(`
+          generator-element-lite-starter-kit
+        `)} generator!`
+      )
     );
 
     const prompts = [
@@ -25,14 +29,14 @@ module.exports = class extends Generator {
     });
   }
 
-  writing() {
+  writing () {
     this.fs.copy(
       this.templatePath('dummyfile.txt'),
       this.destinationPath('dummyfile.txt')
     );
   }
 
-  install() {
+  install () {
     this.installDependencies();
   }
 };
