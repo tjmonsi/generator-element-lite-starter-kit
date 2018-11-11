@@ -23,8 +23,13 @@
     "coveralls": "^3.0.0",
     "eslint": "^5.4.0",
     "eslint-config-prettier": "^3.0.1",
+    "eslint-config-semistandard": "^13.0.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-config-xo": "^0.24.2",
     "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
     "husky": "^0.14.3",
     "jest": "^23.5.0",
     "lint-staged": "^7.2.2",
@@ -46,39 +51,40 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
+      "./node_modules/.bin/eslint --fix",
       "git add"
     ],
     "*.json": [
-      "prettier --write",
+      "./node_modules/.bin/prettier --write",
       "git add"
     ]
   },
   "eslintConfig": {
     "extends": [
       "xo",
-      "prettier"
+      "semistandard"
     ],
     "env": {
       "jest": true,
       "node": true
     },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
-    },
     "plugins": [
-      "prettier"
+      "standard"
+    ]
+  },
+  "semistandard": {
+    "globals": [
+      "beforeAll",
+      "afterAll",
+      "jest",
+      "describe",
+      "it"
     ]
   },
   "scripts": {
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
+    "semistandard": "./node_modules/.bin/semistandard",
+    "pretest": "./node_modules/.bim/eslint .",
+    "precommit": "./node_modules/.bin/lint-staged",
     "test": "jest"
   },
   "repository": "tjmonsi/generator-element-lite-starter-kit",
