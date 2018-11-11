@@ -83,7 +83,7 @@
   },
   "scripts": {
     "semistandard": "./node_modules/.bin/semistandard",
-    "pretest": "./node_modules/.bim/eslint .",
+    "pretest": "./node_modules/.bin/eslint .",
     "precommit": "./node_modules/.bin/lint-staged",
     "test": "jest"
   },
