@@ -1,5 +1,5 @@
 # generator-element-lite-starter-kit [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> It creates an element-lite enabled web app starter kit for projects. It includes Firebase
+> It creates an element-lite enabled web app starter kit for projects. It includes Firebase as a default database well.
 
 ## Installation
 

@@ -1,7 +1,7 @@
 {
   "name": "generator-element-lite-starter-kit",
   "version": "0.0.0",
-  "description": "It creates an element-lite enabled web app starter kit for projects. It includes Firebase as well.",
+  "description": "It creates an element-lite enabled web app starter kit for projects. It includes Firebase as a default database well.",
   "author": {
     "name": "Toni-Jan Keith Monserrat",
     "email": "tonijanmonserrat@gmail.com"
