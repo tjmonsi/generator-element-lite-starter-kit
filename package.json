@@ -20,7 +20,7 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "coveralls": "^3.0.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.4.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-config-semistandard": "^13.0.0",
@@ -85,7 +85,9 @@
     "semistandard": "./node_modules/.bin/semistandard",
     "pretest": "./node_modules/.bin/eslint .",
     "precommit": "./node_modules/.bin/lint-staged",
-    "test": "jest"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "jest": "./node_modules/.bin/jest --coverage",
+    "test": "npm run jest"
   },
   "repository": "tjmonsi/generator-element-lite-starter-kit",
   "license": "MIT"
