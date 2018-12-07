@@ -7,10 +7,10 @@ const template = (html, self) => function () {
       </h1>
       <div class="spacer">
       </div>
-      <navigation-loader>
+      <navigation-wrapper>
         <side-navigation @close-sidebar=${close.bind(this)}>
         </side-navigation>
-      </navigation-loader>
+      </navigation-wrapper>
     </aside>
   `;
 }.bind(self)();

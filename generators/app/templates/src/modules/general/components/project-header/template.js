@@ -12,10 +12,10 @@ const template = (html, self) => function () {
       </h1>
       <div class="spacer">
       </div>
-      <navigation-loader>
+      <navigation-wrapper>
         <header-navigation class="not-mobile">
         </header-navigation>
-      </navigation-loader>
+      </navigation-wrapper>
     </header>
   `;
 }.bind(self)();
