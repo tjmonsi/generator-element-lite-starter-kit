@@ -46,6 +46,21 @@ module.exports = class extends Generator {
     );
 
     this.fs.copy(
+      this.templatePath('.eslintignore'),
+      this.destinationPath('.eslintignore')
+    );
+
+    this.fs.copy(
+      this.templatePath('.eslintrc.js'),
+      this.destinationPath('.eslintrc.js')
+    );
+
+    this.fs.copy(
+      this.templatePath('.gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
+    this.fs.copy(
       this.templatePath('src/**'),
       this.destinationPath('./src')
     );
