@@ -1,6 +1,6 @@
 {
   "name": "element-lite-starter-kit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An element-lite enabled web app starter kit for projects. It includes Firebase as a default database well.",
   "main": "index.js",
   "scripts": {
