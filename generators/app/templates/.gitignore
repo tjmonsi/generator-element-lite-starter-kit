@@ -65,6 +65,8 @@ public
 dist
 
 # config files
-config/firebase.config.js
+configs/firebase/*.config.js
+configs/firebase.config.js
+configs/server/*.server.config.json
 
 .DS_Store

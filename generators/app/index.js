@@ -16,9 +16,15 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
+        type: 'input',
+        name: 'name',
+        message: 'Your project name',
+        default: this.appname // Default to current folder name
+      },
+      {
         type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
+        name: 'confirm',
+        message: 'Are you sure you want to start?',
         default: true
       }
     ];
@@ -26,17 +32,41 @@ module.exports = class extends Generator {
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
+
+      if (!props.confirm) {
+        throw new Error('Stop');
+      }
     });
   }
 
   writing () {
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('*'),
+      this.destinationPath('./')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/**'),
+      this.destinationPath('./src')
+    );
+
+    this.fs.copy(
+      this.templatePath('configs/**'),
+      this.destinationPath('./configs')
+    );
+
+    this.fs.copy(
+      this.templatePath('utils/**'),
+      this.destinationPath('./utils')
+    );
+
+    this.fs.copy(
+      this.templatePath('typings-project/**'),
+      this.destinationPath('./typings-project')
     );
   }
 
   install () {
-    this.installDependencies();
+    this.npmInstall();
   }
 };

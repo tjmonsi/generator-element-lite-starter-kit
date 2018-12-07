@@ -1,4 +1,4 @@
-<% const package = require('../package.json'); const { app, theme, routes } = require('../configs/frontend.config.js'); %><!DOCTYPE html>
+<% const {options} = htmlWebpackPlugin; const package = require('../package.json'); const { app, theme, routes } = require('../configs/frontend.config.js'); const data = {package, app, theme, routes, options} %><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -56,7 +56,15 @@
     </style>
   </head>
   <body>
-    <%= require('./ejs-templates/header.ejs') %>
+    <%= require('./ejs-templates/header.ejs')(data) %>
+    <%= require('./ejs-templates/sidebar.ejs')(data) %>
+    <%= require('./ejs-templates/core.ejs')(data) %>
+    <%= require('./ejs-templates/loader.ejs')(data) %>
+    <%= require('./ejs-templates/error-handler.ejs')(data) %>
+    <%= require('./ejs-templates/raven.ejs')(data) %>
+    <%= require('./ejs-templates/google-analytics.ejs')(data) %>
+    <%= require('./ejs-templates/core-loader.ejs')(data) %>
+    <%= require('./ejs-templates/polyfill-loader.ejs')(data) %>
   </body>
 
 </html>
