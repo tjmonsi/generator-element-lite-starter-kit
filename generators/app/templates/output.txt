@@ -1,0 +1,103 @@
+
+> element-lite-starter-kit@0.0.0 prestart /Users/tjmonsi/Projects/own-projects/generator-element-lite-starter-kit/generators/app/templates
+> npm-run-all --serial create-public
+
+
+> element-lite-starter-kit@0.0.0 create-public /Users/tjmonsi/Projects/own-projects/generator-element-lite-starter-kit/generators/app/templates
+> node ./utils/create-public
+
+
+> element-lite-starter-kit@0.0.0 start /Users/tjmonsi/Projects/own-projects/generator-element-lite-starter-kit/generators/app/templates
+> npm run dev
+
+
+> element-lite-starter-kit@0.0.0 dev /Users/tjmonsi/Projects/own-projects/generator-element-lite-starter-kit/generators/app/templates
+> npm-run-all --parallel compile-watch serve webpack-dev
+
+
+> element-lite-starter-kit@0.0.0 serve /Users/tjmonsi/Projects/own-projects/generator-element-lite-starter-kit/generators/app/templates
+> node ./utils/server
+
+
+> element-lite-starter-kit@0.0.0 webpack-dev /Users/tjmonsi/Projects/own-projects/generator-element-lite-starter-kit/generators/app/templates
+> webpack --env.BROWSERS=module --mode=development --watch
+
+
+> element-lite-starter-kit@0.0.0 compile-watch /Users/tjmonsi/Projects/own-projects/generator-element-lite-starter-kit/generators/app/templates
+> node ./utils/compiler --dev --watch
+
+building fragments
+building manifest.json
+serving at http://localhost:8080
+
+webpack is watching the files…
+
+@babel/preset-env: `DEBUG` option
+
+Using targets:
+{
+  "chrome": "69",
+  "safari": "10"
+}
+
+Using modules transform: auto
+
+Using plugins:
+  transform-dotall-regex { "safari":"10" }
+  transform-exponentiation-operator { "safari":"10" }
+  transform-async-to-generator { "safari":"10" }
+  proposal-async-generator-functions { "safari":"10" }
+  proposal-object-rest-spread { "safari":"10" }
+  proposal-unicode-property-regex { "safari":"10" }
+  proposal-json-strings { "chrome":"69", "safari":"10" }
+  proposal-optional-catch-binding { "safari":"10" }
+
+Using polyfills: No polyfills were added, since the `useBuiltIns` option was not set.
+Hash: 5a53381f268eec2e3439
+Version: webpack 4.25.1
+Time: 3202ms
+Built at: 11/12/2018 7:15:16 PM
+                                         Asset       Size  Chunks             Chunk Names
+                                      404.html   2.25 KiB          [emitted]  
+                            assets/.gitinclude    0 bytes          [emitted]  
+                                    index.html   2.25 KiB          [emitted]  
+                          module.core.0.0.0.js   3.77 KiB    core  [emitted]  core
+                             service-worker.js  420 bytes          [emitted]  
+      vendor/bundles/webcomponents-ce.0.0.0.js   16.5 KiB          [emitted]  
+vendor/bundles/webcomponents-sd-ce-pf.0.0.0.js   99.8 KiB          [emitted]  
+   vendor/bundles/webcomponents-sd-ce.0.0.0.js   72.7 KiB          [emitted]  
+      vendor/bundles/webcomponents-sd.0.0.0.js   57.2 KiB          [emitted]  
+   vendor/custom-elements-es5-adapter.0.0.0.js  930 bytes          [emitted]  
+                      vendor/es5-sham.0.0.0.js   5.48 KiB          [emitted]  
+                      vendor/es5-shim.0.0.0.js   25.4 KiB          [emitted]  
+                   vendor/es6-promise.0.0.0.js   6.43 KiB          [emitted]  
+                      vendor/es6-sham.0.0.0.js   1.74 KiB          [emitted]  
+                      vendor/es6-shim.0.0.0.js   56.3 KiB          [emitted]  
+                         vendor/fetch.0.0.0.js     13 KiB          [emitted]  
+         vendor/intersection-observer.0.0.0.js   21.6 KiB          [emitted]  
+                           vendor/ofi.0.0.0.js   3.21 KiB          [emitted]  
+                         vendor/raven.0.0.0.js   36.7 KiB          [emitted]  
+                  vendor/scoping-shim.0.0.0.js   20.4 KiB          [emitted]  
+              vendor/weakmap-polyfill.0.0.0.js   1.78 KiB          [emitted]  
+Entrypoint core = module.core.0.0.0.js
+[./src/index.js] 0 bytes {core} [built]
+Child html-webpack-plugin for "404.html":
+     1 asset
+    Entrypoint undefined = 404.html
+    [./configs/frontend.config.js] 806 bytes {0} [built]
+    [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.ejs] 3.96 KiB {0} [built]
+    [./package.json] 3.51 KiB {0} [built]
+    [./src/ejs-templates/header.ejs] 207 bytes {0} [built]
+    [./src/index.styl] 159 bytes {0} [built]
+        + 1 hidden module
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [./configs/frontend.config.js] 806 bytes {0} [built]
+    [./node_modules/html-webpack-plugin/lib/loader.js!./src/index.ejs] 3.96 KiB {0} [built]
+    [./package.json] 3.51 KiB {0} [built]
+    [./src/ejs-templates/header.ejs] 207 bytes {0} [built]
+    [./src/index.styl] 159 bytes {0} [built]
+        + 1 hidden module
+Webpack Bundle Analyzer is started at http://127.0.0.1:8888
+Use Ctrl+C to close it
